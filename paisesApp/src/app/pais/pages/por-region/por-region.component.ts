@@ -15,7 +15,7 @@ import { PaisService } from '../../services/pais.service';
 })
 export class PorRegionComponent {
 
-  regiones: string[] = ['africa', 'americas', 'asia', 'europe', 'oceania']
+  regiones: string[] = ['FAIL', 'EU','EFTA','CARICOM','PA','AU','USAN','EEU','AL','ASEAN','CAIS','CEFTA','NAFTA','SAARC'];
   regionActiva: string ="";
   hayError: boolean = false;
   paises: Country[] = [];
@@ -24,8 +24,11 @@ export class PorRegionComponent {
   constructor(private paisService: PaisService) { }
 
   activarRegion (region: string ) {
+
+    if ( region === this.regionActiva) {return;}
     this.regionActiva = region;
     this.hayError = false;
+    this.paises =[];
     
 
     this.paisService.getPaisesPorRegion(region)
