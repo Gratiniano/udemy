@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "paisesApp"
+		},
+		{
+			"path": "notas"
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"PKief.material-icon-theme"
+		]
+	}
+}
