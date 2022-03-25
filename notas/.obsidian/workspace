@@ -1,0 +1,114 @@
+{
+  "main": {
+    "id": "e7552d33cbf7a32b",
+    "type": "split",
+    "children": [
+      {
+        "id": "11b8aef1a996beb9",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "PANDOC.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7e102dd80aa17716",
+    "type": "split",
+    "children": [
+      {
+        "id": "f7619703fb2d5b9f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5057aa33f1ab722a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "cf881f3d8789facb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 172
+  },
+  "right": {
+    "id": "8591e1edadfedf19",
+    "type": "split",
+    "children": [
+      {
+        "id": "4be5ae8e6a2a4e37",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f6eea3ace42393ce",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "PANDOC.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "73503b1229e22955",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "PANDOC.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "11b8aef1a996beb9",
+  "lastOpenFiles": [
+    "PANDOC.md",
+    "data/AGRI_cover_page.md",
+    "pruebas/basico.md",
+    "cover-page.md",
+    "FUNCIONALIDADES RIA-FORMS.md",
+    "SBE/Writing Great Specifications Using SBE (Kamil Nicieja).md",
+    "Untitled.md",
+    "RIA. Propuesta tramitación.md",
+    "npm.md",
+    "SIGCA/2021_19223. Aplicaciones bienestar animal..md"
+  ]
+}
