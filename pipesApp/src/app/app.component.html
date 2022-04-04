@@ -1,18 +1,2 @@
 <app-menu></app-menu>
-<div class ="text-layout">
-  <h1>{{ nombre | titlecase }}  </h1>
-  <h1>{{ valor | number }}</h1>
-</div>
-
-<button pButton 
-        (click)="mostrarNombre()"  
-        type="button" 
-        icon="pi pi-bell" 
-        iconPos="right"
-        class="p-button-help"
-        label="Cambiar nombre"> 
-</button>
-
-<p-card header="Simple Card"> 
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
-</p-card>
+<router-outlet></router-outlet>
