@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "PANDOC.md",
+            "file": "pipesApp.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PANDOC.md",
+                "file": "pipesApp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PANDOC.md"
+                "file": "pipesApp.md"
               }
             }
           }
@@ -100,6 +100,7 @@
   },
   "active": "11b8aef1a996beb9",
   "lastOpenFiles": [
+    "pipesApp.md",
     "PANDOC.md",
     "data/AGRI_cover_page.md",
     "pruebas/basico.md",
@@ -108,7 +109,6 @@
     "SBE/Writing Great Specifications Using SBE (Kamil Nicieja).md",
     "Untitled.md",
     "RIA. Propuesta tramitación.md",
-    "npm.md",
-    "SIGCA/2021_19223. Aplicaciones bienestar animal..md"
+    "npm.md"
   ]
 }
