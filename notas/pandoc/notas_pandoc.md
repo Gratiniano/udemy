@@ -30,7 +30,7 @@ pandoc "./data/AGRI_cover_page.md"  --reference-doc=.\data\custom-reference.docx
 ```
 
 
-# ESTILOS EN DOCX
+## Estilos en DOCX
 A la hora de definir los estilos en Word se pueden definir cómo asociados a caracter o asociados a parrafo.
 Dependiendo de esto se podrán referir en el documento markdown de dos formas distintas.
 ```markdown
@@ -117,3 +117,17 @@ Prueba
     :::
 ``` 
 
+## Estilos de Tabla.
+**Pandoc** aplica siempre el *estilo de tabla* por defecto *Table* que no es editable en *Word 2016*.
+
+La alternativa más sencilla encontrada ha sido incluir un post-proceso en Python mediante la librería [python-docx](https://python-docx.readthedocs.io/en/latest/) que reasigne el estilo de tabla al deseado.
+
+```python
+import docx
+document = docx.Document('./base.docx')
+for table in document.tables:
+    table.style = document.styles['EstiloTable1'] # custom_style must exist in your reference.docx file
+document.save("./target_table.docx")
+```
+
+## 

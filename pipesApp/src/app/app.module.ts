@@ -3,9 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-import { PrimeNgModule } from './prime-ng/prime-ng.module';
-import {SharedModule } from './shared/shared.module';
+
+
 import { AppRouterModule } from './app-router.module';
+import { PrimeNgModule } from './prime-ng/prime-ng.module';
+import { SharedModule } from './shared/shared.module';
+import { VentasModule } from './ventas/ventas.module';
 
 
 @NgModule({
@@ -16,7 +19,8 @@ import { AppRouterModule } from './app-router.module';
     BrowserModule,
     PrimeNgModule, 
     AppRouterModule,
-    SharedModule
+    SharedModule,
+    VentasModule
   ],
   providers: [],
   bootstrap: [AppComponent]

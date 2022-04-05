@@ -21,7 +21,8 @@ Pipe
 PipeTransform
 
 
-# Instalar PrimeNg
+#  PrimeNg
+## Instalar PrimeNg
 En la consola 
 ```shell
 npm install primeng primeicons --save
@@ -53,5 +54,19 @@ Aplicación de fuentes, colores e iconos
  label="Cambiar nombre">
 
 </button>
+```
+
+## Instalar PrimeFlex
+PrimeFlex is a lightweight responsive CSS utility library to accompany Prime UI libraries and static webpages as well.
+```shell
+npm install primeflex --save
+```
+
+Actualizar *angular.json*
+```json
+"styles": [
+	...,
+ "node_modules/primeflex/primeflex.css"
+ ],
 ```
 
