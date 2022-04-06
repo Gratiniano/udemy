@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "pipesApp.md",
+            "file": "RIA/Captura de Datos de Solicitud. Actividades, Materias Primas y Productos Resultantes.md",
             "mode": "source",
             "source": false
           }
@@ -69,14 +69,14 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pipesApp.md",
+                "file": "RIA/Captura de Datos de Solicitud. Actividades, Materias Primas y Productos Resultantes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -86,29 +86,38 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pipesApp.md"
+                "file": "RIA/Captura de Datos de Solicitud. Actividades, Materias Primas y Productos Resultantes.md"
+              }
+            }
+          },
+          {
+            "id": "5d7f3da237aac04b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "11b8aef1a996beb9",
   "lastOpenFiles": [
-    "pipesApp.md",
-    "pandoc/cover-page/AGRI_cover_page.md",
+    "RIA/Captura de Datos de Solicitud. Actividades, Materias Primas y Productos Resultantes.md",
     "pandoc/notas_pandoc.md",
-    "Untitled.md",
-    "RIA. Propuesta tramitación.md",
-    "FUNCIONALIDADES RIA-FORMS.md",
-    "data/AGRI_cover_page.md",
-    "PANDOC.md",
-    "pruebas/basico.md",
-    "cover-page.md"
+    "RIA/temp1.md",
+    "RIA/temp.md",
+    "RIA/FUNCIONALIDADES RIA-FORMS.md",
+    "MapStruct in Java.md",
+    "[Guide.md",
+    "npm.md",
+    "SBE/Untitled.md",
+    "curso/pipesApp.md"
   ]
 }

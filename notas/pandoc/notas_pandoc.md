@@ -130,4 +130,9 @@ for table in document.tables:
 document.save("./target_table.docx")
 ```
 
-## 
+## +hard_line_breaks
+La conversión de algunos documentos simples en *MarkDown* a *docx* no preserva los *cambios de linea*. 
+Es necesario añadir la extensión *+hard_line_breaks*
+```shell
+pandoc -f markdown+hard_line_breaks tmp.md -o tmp.docx
+```
