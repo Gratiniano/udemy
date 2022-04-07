@@ -7,11 +7,11 @@ Las soluciones aparecen en el dominio técnico.
 #### 1.5.2 Ilustrar los requisitos con ejemplos.
 #### 1.5.3 Especificar de forma colaborativa.
 ### 1.6 Beneficios a largo plazo de automatizar convesaciones.
-**DEFINICION**    *Documentación viva -* documentación que cambia junto con el sistema que documenta gracias al enlace entre texto y código y a la validación frecuente.
+#DEFINICIÓN    *Documentación viva -* documentación que cambia junto con el sistema que documenta gracias al enlace entre texto y código y a la validación frecuente.
 
 ### 1.7 Capturando conversaciones como especificaciones ejecutable
 
-**DEFINICIÓN**   *Escenario -* * un ejemplo concreto que ilustra una regla del negocio.
+#DEFINICIÓN   *Escenario -* * un ejemplo concreto que ilustra una regla del negocio.
 
 ***Plantilla Given-When-then***
 ```
@@ -20,11 +20,11 @@ Dado un cliente que activa el seguimiento de ubicación movil.
 	Entonces el punto de inicio debería estar establecido como su ubicación actual.
 ```
 
-**DEFINICIÓN**   *Requisito de comportamiento -* Un requisito con forma de historia acerca de cómo los usuarios se comportan cuando interactuan con el sistema. Siempre se refieren a ejemplos de uso del sistema. 
+#DEFINICIÓN   *Requisito de comportamiento -* Un requisito con forma de historia acerca de cómo los usuarios se comportan cuando interactuan con el sistema. Siempre se refieren a ejemplos de uso del sistema. 
 
 **AVISO**     Si aparece alguna referencia sobre conexiones a base de datos o pulsar botones, se está haciendo mal.
 
-**DEFINICIÓN**   *Especificación ejecutable -* Una especificación que puede ser ejecutada como una prueba automatizada.
+#DEFINICIÓN   *Especificación ejecutable -* Una especificación que puede ser ejecutada como una prueba automatizada.
 
 
 ### 1.8 Haciendo software que importa
@@ -46,7 +46,7 @@ A[Especificación ejecutable] --> B[Capa de especificación]
 A --> C[Capa de automatización]
 ```
 #### 2.1.1 Capa de especificación
-**DEFINICIÓN**    *Capa de especificación -* Contiene documentos de texto escritos en Gherkin que los humanos pueden leer.
+#DEFINICIÓN    *Capa de especificación -* Contiene documentos de texto escritos en Gherkin que los humanos pueden leer.
 
 **Elementos:**
 	 - Criterios de aceptación.
@@ -55,10 +55,10 @@ A --> C[Capa de automatización]
 
 Expresado todo en forma de escenarios *Given-When-Then*.
 
-**DEFINICIÓN**    *Suite de especificación -* Colección de especificaciones ejecutables y el código de prueba para un único proyecto. Suele colocarse en el código base ddonde pude ser automatizada y ejecutada.
+#DEFINICIÓN    *Suite de especificación -* Colección de especificaciones ejecutables y el código de prueba para un único proyecto. Suele colocarse en el código base ddonde pude ser automatizada y ejecutada.
 
 #### 2.2.2 Capa de automatización
-**DEFINICIÓN**    *Capa de automatización -* ejecuta una simulación de la aplicación implementada para comprobar si el código se comporta según lo definido en la especificación.
+#DEFINICIÓN    *Capa de automatización -* ejecuta una simulación de la aplicación implementada para comprobar si el código se comporta según lo definido en la especificación.
 
 Cada vez que quieres escribir una especificaciòn Gherkin debes añadir un nuevo fichero .feature a la capa de especificación de la *suite de especificación*, escribir los escenarios allí y entonces añadir el código de prueba a la suite.
 
@@ -66,12 +66,12 @@ Cada vez que quieres escribir una especificaciòn Gherkin debes añadir un nuevo
 
 ### 2.2 Escribir tu primer escenario Gherkin
 
-#### 2.2.1 Feature
+#### 2.2.1 Feature (Funcionalidad)
 *Feature* es la palabra que usa Gherkin para indicar que una nueva especificación ha comenzado. Puede ser sustituida por las palabras *Ability* o *Business Need* que permiten una mejor categorización.
 
 Bajo la linea de *Feature*  se puede añadir una explicación de la funcionalidad.
 
-**DEFINICIÓN**    *Resumen de la especificación -* Linea de especificación conteniendo información importante para comprender la especificación.
+#DEFINICIÓN    *Resumen de la especificación -* Linea de especificación conteniendo información importante para comprender la especificación.
 
 
 #### 2.2.2 Scenario
@@ -84,7 +84,7 @@ Debe seguir el patrón *Given-When-Then*:
 
 Se permite incluir cualquier cantidad de información en formato libre entre la palabra reservada *Scenario* y el primer *Given* que ayude a aclarar cual es el propósito del escenario.
 
-#### 2.2.3 Given
+#### 2.2.3 Given (Dado que)
 Responden a la pregunta ¿qué prerequisitos permiten que ocurra el escenario?
 Proporcionan un contexto donde el escenario tiene lugar.
 
@@ -99,7 +99,7 @@ Feature: Planificación
 [ Best practice ]--> se usa un ejemplo concreto, Mike y el rol que desempeña.
 
 
-#### 2.2.4 When
+#### 2.2.4 When (Cuando)
 Describen las acciones clave que realiza el usuario.
 ```Gherkin
 Feature: Planificación
@@ -113,7 +113,7 @@ Feature: Planificación
 ```
 
 
-#### 2.2.5 Then
+#### 2.2.5 Then (Entonces)
 Describe las consecuencias de la acción (When) en el contexto (Given). 
 Normalmente son representaciones concretas de las reglas que quieren aplicarse.
 
@@ -132,7 +132,7 @@ Feature: Planificación
 
 ### 2.3 Comprensión de las estructuras de pasos y escenarios.
 El paso de la capa de especificación a la de automatización.
-**DEFINICIÓN**    *Paso -*  la unidad más pequeña de la especificación Gherkin. Usualmente una única línea de código. Consiste en la *palabra reservada* seguida por el contenido en lenguaje natural.
+#DEFINICIÓN    *Paso -*  la unidad más pequeña de la especificación Gherkin. Usualmente una única línea de código. Consiste en la *palabra reservada* seguida por el contenido en lenguaje natural.
 
 Trabaja en dos niveles:
 		- Describe la lógica del negocio en lenguaje natural.
@@ -144,3 +144,93 @@ Desde este punto de vista:
 
 ### 2.4 Probando diferentes salidas.
 Para asegurar que la suite de especificación tiene una cobertura de escenarios aceptable, se debe especificar lo que ocurre tanto cuando cuando  un usuario realiza una aproximación exitosa cómo 
+
+
+[sincronizar con git]
+#### 3.1.1 Desarrollo desde afuera hacia adentro en Gherkin
+[sincronizar con git]
+##### DEFINIR ACTORES EN LOS ESCENARIOS
+Uso de nombres reales y escenarios orientados a la experiencia del usuario.
+**Cada escenario  debe ser descrito desde la perspectiva de un *actor*.**
+
+#DEFINICIÓN   *Actor -* Cualquier cosa que influya en una acción o proceso que tenga lugar en el sistema en diseño.
+
+Tres tipos de actores:
+	- *Interesados* : cualesquiera con intereses relacionados con el caso de uso. Puede ser interno, externo, evidente, oculto...
+	- *Organizaciones:*  por ejemplo una organización externa que consuma servicios de la nuestra.
+	- Sistemas.
+
+##### DESARROLLO DE  AFUERA HACIA ADENTRO (Outside-in) Y ESCENARIOS ORIENTADOS A USUARIOS
+Recomendado usar el punto de vista de los *usuarios finales*.
+
+#TIP para obtener mejores requisitos es necesario comprender *quien* necesita una solución y *porqué* la necesita.
+
+#DEFINICIÓN  *Outside-in development -* Metodología de desarrollo basada en comprender los objetivos  y motivos de los interesados. Termino asociado a Gherkin y BDD, no a SBE.
+
+#### 3.1.2 Recoger datos realistas.
+#### 3.1.3 Preferir la especificación de propósitos y resultados en vez de la interfaz de usuario.
+#DEFINICIÓN  *End-to-end tests -* Tests que comprueban si el flujo de una aplicación se comporta conforme a lo esperado de principio a fin, emulando al usuario real interactuando con el UI.
+
+#TIP  No escriba escenarios acerca del UI. Escribalos acerca de las salidas del negocio. A nadie le preocupa el UI más que dejar el trabajo hecho.
+
+Estilo *orientado al interfaz* (conocido como *estilo imperativo*) contra estilo *orientado al resultado* (conocido como *estilo declarativo*). En el fondo son distintos niveles de abstracción.
+
+### 3.2 Componer escenarios Gherkin.
+Reglas de composición de la plantilla *Given-When-Then* para facilitar el desarrollo de afuera hacia adentro:
+	- *Composición de bajo nivel -* Cómo formular los pasos de Gherkin.
+	- *Composición de alto nivel -* Cómo equilibrar los *Givens*, *Whens* y *Thens* en un escenario.
+
+#### 3.2.1 Empezar con un "Then".
+#TIP  Empezar con los resultados anima a los usuarios aparticipar. Los resultados **existen** en el mundo real.
+
+#TIP  Para conseguir mejores resultados, examinar comportamientos existentes y tratar de mejorarlos.
+
+#DEFINICIÓN  *Miopía de marketing -* Error de poner más atención en el producto que en los beneficios producidos por el producto.
+
+**Los *Thens* son los resultados.**
+
+#TIP  Para facilitar el trabajo *outside-in* se puede usar el siguiente patrón en la mayor parte de los *Thens*:
+`<un actor> deberia ser capaz de <obtener un resultado>`.
+
+**Definir correctamente los resultados es más importante que escribir buen Gherkin o buen software**
+
+#### 3.2.2. Usar un unico "When" por escenario
+Usar más de un *When* para un único resultado provoca que no podamos saber cual de esos *When* está produciendo los resultados.
+Se debe pensar en los *Whens* cómo *tareas de usuario* realizadas por actores e intentar **especificar una única tarea por escenario**.
+
+#DEFINICIÓN  *Tarea de usuario -* Instrucción de alto nivel que describe una única actividad de negocio.
+
+#TIP  Para identificar tareas pensar si el usuario podría realizarla sin usar el ordenador. P.ej. Revisar contenido.
+
+#TIP  Las tareas de usuario tiene lugar en el presente y deben ser expresadas en una oración activa.
+
+> **Patrón Guíón**
+> Aproximación centrada en el usuario para escribir **test de aceptación**. Organiza test alrededor de actores que realizan tareas de usuario para conseguir sus objetivos.
+
+**Escenarios con multiples "Whens" aceptables"**.
+Cuando una *tarea de usuario* se divide en múltiples *acciones de usuario*. P.Ej.- Una orden de impresión implica la selección de múltiples opciones de impresión.
+
+#TIP  *[COMPOSICIÓN]*  Para distinguir entre *tareas* y *acciones* recordar que las tareas permiten a los actores llegar a los *Thens*.
+
+#### 3.2.3 Especificar pre-requisitos con "Givens"
+Un *Given* crea una *foto* del mundo representado y su historia *antes* de que la acción tenga lugar en el escenario.
+
+#TIP  *[ESTILO]* Usar oraciones pasivas en preterito, o componer el *Given* cómo una **lista de cosas** que es necesario que ocurran antes de que los actores puedan realizar la acción. Imaginar los *Givens* cómo bloques de construcción.
+
+##### REUSAR GIVENS EN LOS ANTECEDENTES (Background)
+#DEFINICIÓN  *Antecedente (Background) -* Lista de pasos que se deben ejecutar antes de cada uno de los escenarios en el mismo fichero de funcionalidad.
+
+#### 3.2.4 Elegir el nivel de abstracción correcto.
+##### NO SER DEMASIADO ESPECÍFICO
+##### ¿CUANTOS PASOS DEBE HABER EN UN ESCENARIO?
+#TIP  mantener los escenarios en un nivel de abstracción tal que permita los mínimos *Givens*, *Whens* y *Thens*  sin sacrificar la legibilidad.
+
+- Se debería explicar los detalles necesarios par acomprender el propósito del escenario. 
+- Si un *flujo de usuario* debe ser parte de un escenario es ncesario que se mencione.
+- Pensar en cómo lo pueden interpretar los lectores.
+- **Ser más detallado cuando se introducen conceptos nuevos**. Si los usuarios leen las especificaciones de una forma lineal,  el conocimiento es acumulativo.
+- Utilizar la *Prueba del pasillo*.
+
+#DEFINICIÓN  *Prueba del pasillo (Corridor testing) -* Solucitud informal para obtener realimentación o datos rápidos del usuario.
+
+### 3.3 Contar historias que impacten con Gherkin
