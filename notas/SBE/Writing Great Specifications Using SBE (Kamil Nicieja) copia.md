@@ -36,7 +36,7 @@ Dado un cliente que activa el seguimiento de ubicación movil.
 # Parte 1. Escribiendo especificaciones ejecutables con ejemplos
 
 
-## 2. La capa de especificación y la capa de automatización.
+## Capítulo 2. La capa de especificación y la capa de automatización.
 ### 2.1 Las capas de especificaciones ejecutables.
 Cada especificación ejecutable tiene dos capas:  *capa de especificación*  y  *capa de automatización*.
 
@@ -146,6 +146,7 @@ Desde este punto de vista:
 Para asegurar que la suite de especificación tiene una cobertura de escenarios aceptable, se debe especificar lo que ocurre tanto cuando cuando  un usuario realiza una aproximación exitosa cómo 
 
 
+<<<<<<< HEAD:notas/SBE/Writing Great Specifications Using SBE (Kamil Nicieja).md
 [sincronizar con git]
 #### 3.1.1 Desarrollo desde afuera hacia adentro en Gherkin
 [sincronizar con git]
@@ -234,3 +235,20 @@ Un *Given* crea una *foto* del mundo representado y su historia *antes* de que l
 #DEFINICIÓN  *Prueba del pasillo (Corridor testing) -* Solucitud informal para obtener realimentación o datos rápidos del usuario.
 
 ### 3.3 Contar historias que impacten con Gherkin
+=======
+## Capitulo 3.  Dominando la plantilla *Given-When-Then*
+Tres elementos de la escritura de escenarios:
++ *Estilo* acerca lo agradable del lenguaje.
++ *Composición* acerca de la claridad y coherencia.
++ *Historia* que es lo que se narra.
+
+El ejemplo trabaja sobre un editor ficticio, *Queneau*, que permite imitira diferentes estilos
+
+### 3.1 Elección del estilo correcto para los escenarios Gherkin.
+#### 3.1.1 Desarrollando Gherkin de afuera hacia adentro.
+**ESCRIBIR ESCENARIOS ORIENTADOS AL USUARIO**
+- Incluir contexto explicativo en los comentarios del escenario.
+**DEFINIR ACTORES EN LOS ESCENARIOS**
+
+
+>>>>>>> mensaje:notas/SBE/Writing Great Specifications Using SBE (Kamil Nicieja) copia.md
