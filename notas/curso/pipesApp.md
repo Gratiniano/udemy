@@ -70,3 +70,32 @@ Actualizar *angular.json*
  ],
 ```
 
+## Localización
+### A nivel de configuración de la aplicación.
+***app.module.ts*** 
+```typescript
+// cambiar el locale de la app
+import localeEs from '@angular/common/locales/es-ES';
+import {registerLocaleData} from '@angular/common';
+
+registerLocaleData(localEs);
+...
+providers: [
+ {provide: LOCALE_ID, useValue:'es'}
+ ],
+```
+***basicos.component.html***
+```Typescript
+
+```
+
+### En tiempo de ejecución
+
+***basicos.component.html***
+```typescript
+// previamente hemos registrado el locale fr (frances)
+<li>{{fecha | date:'long':'GMT-6':'fr'}}</li>
+
+// salida esperada
+//-   11 avril 2022 à 05:27:40 GMT-6
+```

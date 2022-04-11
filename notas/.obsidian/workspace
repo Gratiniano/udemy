@@ -111,6 +111,7 @@
   "active": "11b8aef1a996beb9",
   "lastOpenFiles": [
     "SIGCA/2022/2022_5595. Solicitud de muestra de Control 2ª campaña. B1.md",
+    "curso/pipesApp.md",
     "SIGCA/2021_19223. Aplicaciones bienestar animal..md",
     "RIA/FUNCIONALIDADES RIA-FORMS.md",
     "RIA/Captura de Datos de Solicitud. Actividades, Materias Primas y Productos Resultantes.md",
@@ -118,7 +119,6 @@
     "Spring/Spring REST API + OAuth2 + Angular.  Baeldung.md",
     "SIGCA/2020/2020_5070. Incidencia pago bienestar Animal..md",
     "SBE/Writing Great Specifications Using SBE (Kamil Nicieja).md",
-    "pandoc/notas_pandoc.md",
-    "RIA/temp1.md"
+    "pandoc/notas_pandoc.md"
   ]
 }
