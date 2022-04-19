@@ -143,12 +143,21 @@ Desde este punto de vista:
 		- *Thens* miden o verifican las consecuencias de la acción realizada.
 
 ### 2.4 Probando diferentes salidas.
-Para asegurar que la suite de especificación tiene una cobertura de escenarios aceptable, se debe especificar lo que ocurre tanto cuando cuando  un usuario realiza una aproximación exitosa cómo 
+Para asegurar que la suite de especificación tiene una cobertura de escenarios aceptable, se debe especificar lo que ocurre tanto cuando cuando  un usuario realiza una aproximación exitosa cómo falla.
 
 
-[sincronizar con git]
-#### 3.1.1 Desarrollo desde afuera hacia adentro en Gherkin
-[sincronizar con git]
+## Capitulo 3.  Dominando la plantilla *Given-When-Then*
+Tres elementos de la escritura de escenarios:
++ *Estilo* acerca lo agradable del lenguaje.
++ *Composición* acerca de la claridad y coherencia.
++ *Historia* que es lo que se narra.
+
+El ejemplo trabaja sobre un editor ficticio, *Queneau*, que permite imitira diferentes estilos
+
+### 3.1 Elección del estilo correcto para los escenarios Gherkin.
+
+#### 3.1.1 Desarrollo desde afuera hacia adentro *(outside-in)* en Gherkin
+
 ##### DEFINIR ACTORES EN LOS ESCENARIOS
 Uso de nombres reales y escenarios orientados a la experiencia del usuario.
 **Cada escenario  debe ser descrito desde la perspectiva de un *actor*.**
@@ -190,7 +199,7 @@ Reglas de composición de la plantilla *Given-When-Then* para facilitar el desar
 **Los *Thens* son los resultados.**
 
 #TIP  Para facilitar el trabajo *outside-in* se puede usar el siguiente patrón en la mayor parte de los *Thens*:
-`<un actor> deberia ser capaz de <obtener un resultado>`.
+				`<un actor> deberia ser capaz de <obtener un resultado>`.
 
 **Definir correctamente los resultados es más importante que escribir buen Gherkin o buen software**
 
@@ -234,3 +243,85 @@ Un *Given* crea una *foto* del mundo representado y su historia *antes* de que l
 #DEFINICIÓN  *Prueba del pasillo (Corridor testing) -* Solucitud informal para obtener realimentación o datos rápidos del usuario.
 
 ### 3.3 Contar historias que impacten con Gherkin
+El proposito es escribir escenarios significativos que cubran adecuadamente las pruebas.
+
+#### 3.3.1 Escribir descripciones preparatorias.
+Empezar escribiendo un texto libre y corto sobre el requisito. Ignorar distracciones y simplemente escribir *algo*.
+La reescritura como patrón *Given-When-Then* se hará más adelante.
+Si la descripción es satisfactoria se incluirá en el resumen de la especificación.
+
+#### 3.3.2 Examinar  los criterios de aceptación con ejemplos.
+Nuevos criterios de aceptación pueden dar lugar a nuevos ejemplos y viceversa.
+
+```mermaid
+graph LR
+A(Criterios de aceptación):::class1 -->|pueden generar|B(Ejemplos):::class1
+B-->|pueden generar|A
+classDef class1 fill:#ffeaa5,stroke:#333,stroke-width:4px;
+```
+Utilizar ejemplos para ilustrar los criterios de aceptación.
+
+#### 3.3.3 Explorar contextos cuestionando los "Given".
+Despues de escribir un escenario preguntarse *¿Hay algún contexto en el cual, para el mismo evento, se produzca un resultado diferente?*
+
+#### 3.3.4 Explorar resultados cuestionando los "Then".
+Preguntarse *¿Hay algún otro resultado significativo que no se haya contemplado?*
+
+Cuando un mismo evento provoca dos resultados distintos (p.ej. prestar un servicio y realizar un cargo económico) se debe cuestionar si pueden darse por separado o no. Si pueden darse por separado, probablemente, se trata de dos requisitos distintos en dos dominios del negocio distintos.
+
+## Capitulo 4. Bases de los Esquemas del escenario (scenario outlines)
+#DEFINICIÓN  *Esquema del escenario (Scenario outline) -* Plantilla que escenarios similares pueden compartir para no tener que repetir el mismo escenario sólo cambiando las métricas.
+Ayudan a implementar el principio **DRY** (*Don't Repeat Yourself*).
+Esto implica realizar un *refinamiento de los ejemplos*:
+- Mezclar ejemplos similares
+- Eliminar ejemplos irrelevantes
+- Enfocarse en los ejemplos clave.
+- Asegurarse que los ejemplos clave son fáciles de entender.
+ ### 4.1 Aplicación de ejemplo Shopping
+ ### 4.2 Usar Esquemas del escenario.
+ #### 4.2.1 Detectar redundancias en escenarios Gherkin
+ #### 4.2.2 Refactorizar los escenarios redundantes con Esquemas del escenario
+ Idealmente, hay dos tipos de escenarios:
+- Los que agrupan visualment ejemplos similares y usan la misma plantilla subyacente para todos los ejemplos (*scenario outlines*).
+- Los que son lo suficientemente importantes para permanecer independientes.
+
+Ejemplo
+```Gherkin
+Given a <format> book in Simona's cart
+When she pays for it
+Then the book should be <shipped>
+```
+
+### 4.3 Estructura de un Esquema del escenario
+```Gherkin
+Feature: Shipping
+	Scenario Outline: Shipping
+
+		Given a <format> book in Simona's cart
+			When she pays for it
+			Then the book should be <shipped>
+
+		Examples: 
+		| format    | shipped                 |
+		| PDF       | sent to a mobile device |
+		| AudioBook | sent over email         |
+		| Hardcover | shipped physically      |
+		| Paperback | shipped physically      |
+```
+Se toman los *ejemplos simples* de los *escenarios simples* y se colocan en grupos refinados.
+#### 4.3.1 La tabla de ejemplos
+La primera línea es la cabecera conteniendo los parámetros del *Scenario Outline*.
+Cada ejemplo viene en una fila.
+#### 4.3.2 Parámetros
+Vienen entre corchetes angulares (**<>**) y no admiten espacios.
+La plantilla escenario se ejecuta una vez para cada fila de la tabla de ejemplos.
+
+#### 4.3.3 La palabra reservada "Esquema del escenario" (Scenario outline).
+
+### 4.4 Ventajas de los Esquemas del escenario.
+#### 4.4.1 Ficheros de funcionalidad más cortos.
+#### 4.4.2 Ficheros de funcionalidad organizados por reglas del negocio de alto nivel.
+
+### 4.5 Crecer y mantener los Esquemas del escenario.
+**Ninguna funcionalidad está escrita en piedra**.
+
