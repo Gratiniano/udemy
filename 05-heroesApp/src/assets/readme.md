@@ -198,6 +198,26 @@ generará el fichero `heroes-service.ts`.
 
 La instruccion `providedIn: 'root'` indica que el servicio estará disponible a nivel de aplicación, en lugar de a nivel de módulo [Providing dependencies in modules](https://angular.io/guide/providers).
 
-Esto implica que será necesrio importar ***HttpClientModule*** a nivel de aplicación (*app.module.ts*) para que el servicio pueda ser invocado desde cualquier parte.
+Esto implica que será necesario importar ***HttpClientModule*** a nivel de aplicación (*app.module.ts*) para que el servicio pueda ser invocado desde cualquier parte.
+
+### Atributos opcionales en un interface de Typescript
+```typescript
+  export interface Heroe {
+      id?:               string;
+      superhero:        string;
+      alt_img?:         string;
+  }
+```
+### Explicitar las funciones que devuelven **Observables**
+No es necesario, pero es conveniente por claridad del código.
+
+`heroes.service.ts`
+```typescript
+  getHeroes():Observable<Heroe[]>{
+      return this.http.get<Heroe[]>('http://localhost:3000/heroes');
+  }
+```
+
+¿Porqué es un *Observable*? Porque el método *get* de *HttpClient* lo es.
 
 
