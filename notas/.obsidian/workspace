@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "11b8aef1a996beb9",
+        "id": "0a1b5d60c29b53c9",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "SIGCA/2022/2022_5595. Solicitud de muestra de Control 2ª campaña. B1.md",
+            "file": "Tablas a actualizar con datos no disociados.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 100
+    "width": 172
   },
   "right": {
     "id": "8591e1edadfedf19",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SIGCA/2022/2022_5595. Solicitud de muestra de Control 2ª campaña. B1.md",
+                "file": "Tablas a actualizar con datos no disociados.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,16 +85,8 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
-            }
-          },
-          {
-            "id": "8ff426c48b6e3f2d",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
               "state": {
-                "file": "SIGCA/2022/2022_5595. Solicitud de muestra de Control 2ª campaña. B1.md"
+                "file": "Tablas a actualizar con datos no disociados.md"
               }
             }
           },
@@ -110,14 +102,16 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 100
   },
-  "active": "11b8aef1a996beb9",
+  "active": "0a1b5d60c29b53c9",
   "lastOpenFiles": [
+    "Tablas a actualizar con datos no disociados.md",
+    "Reunión 20-04-2022.md",
     "SIGCA/2022/2022_5595. Solicitud de muestra de Control 2ª campaña. B1.md",
     "curso/pipesApp.md",
     "SIGCA/2021_19223. Aplicaciones bienestar animal..md",
@@ -125,8 +119,6 @@
     "RIA/Captura de Datos de Solicitud. Actividades, Materias Primas y Productos Resultantes.md",
     "Revision EVS e Intefaz de usuario..md",
     "Spring/Spring REST API + OAuth2 + Angular.  Baeldung.md",
-    "SIGCA/2020/2020_5070. Incidencia pago bienestar Animal..md",
-    "SBE/Writing Great Specifications Using SBE (Kamil Nicieja).md",
-    "pandoc/notas_pandoc.md"
+    "SIGCA/2020/2020_5070. Incidencia pago bienestar Animal..md"
   ]
 }
