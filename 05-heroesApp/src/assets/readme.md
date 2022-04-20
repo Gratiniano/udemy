@@ -221,3 +221,4 @@ No es necesario, pero es conveniente por claridad del código.
 ¿Porqué es un *Observable*? Porque el método *get* de *HttpClient* lo es.
 
 
+

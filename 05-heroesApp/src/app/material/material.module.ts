@@ -11,7 +11,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [],
   exports: [
-    MatButtonModule,
+    MatButtonModule, 
     MatCardModule,
     MatIconModule,
     MatListModule,

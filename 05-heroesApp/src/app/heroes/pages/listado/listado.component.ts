@@ -7,7 +7,7 @@ import { HeroesService } from '../../services/heroes.service';
   templateUrl: './listado.component.html',
   styles: [
     `
-    mat-card {
+    mat-card { 
       margin-top:20px;
     }
     `
