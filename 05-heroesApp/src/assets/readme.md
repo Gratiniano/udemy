@@ -141,3 +141,63 @@ imports[
 </mat-sidenav-container>
 ```
 Para poder usar estos componentes, hemos tenido que importarlos antes en `material.module.ts`.
+
+
+# Heroes Backend. JSON Server
+
+Permite crear un backend rest con "cero configuración"
+
+## Instalación
+
+**Instalar JSON Server**
+```shell
+  npm install -g json-server
+```
+**Crear la base de datos**
+Creamos el fichero  */05-heroes-server/db.json* que contendrá la información a servir.
+
+**Iniciar el servidor**
+```shell
+  json-server --watch db.json
+```
+
+Nos debe dar la salida
+```
+    \{^_^}/ hi!
+
+    Loading db.json
+    Done
+
+    Resources
+    http://localhost:3000/usuarios
+    http://localhost:3000/heroes
+
+    Home
+    http://localhost:3000
+```
+
+Ya podemos hacer peticiones REST en el puerto 3000.
+
+# Heroes Service - Recuperar información
+
+```shell
+    ng generate service heroes/services/heroes
+```
+generará el fichero `heroes-service.ts`.
+```typescript
+    import { Injectable } from '@angular/core';
+
+    @Injectable({
+    providedIn: 'root'
+    })
+    export class HeroesService {
+
+    constructor() { }
+    }
+```
+
+La instruccion `providedIn: 'root'` indica que el servicio estará disponible a nivel de aplicación, en lugar de a nivel de módulo [Providing dependencies in modules](https://angular.io/guide/providers).
+
+Esto implica que será necesrio importar ***HttpClientModule*** a nivel de aplicación (*app.module.ts*) para que el servicio pueda ser invocado desde cualquier parte.
+
+
