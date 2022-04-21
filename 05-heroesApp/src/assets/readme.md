@@ -178,7 +178,7 @@ Nos debe dar la salida
 
 Ya podemos hacer peticiones REST en el puerto 3000.
 
-# Heroes Service - Recuperar información
+## Heroes Service - Recuperar información
 
 ```shell
     ng generate service heroes/services/heroes
@@ -220,5 +220,15 @@ No es necesario, pero es conveniente por claridad del código.
 
 ¿Porqué es un *Observable*? Porque el método *get* de *HttpClient* lo es.
 
+
+## HeroeTarjeta. Componentes.
+**Recopilatorio**
+- crear un nuevo componente con `ng g c heroes/components/heroeTarjeta --skip-test -is
+- copiar la etiqueta <mat-card> y su contenido al componente.
+- Establecer un parámetro de entrada (`@Input() heroe!: Heroe;`) en `heroe-tarjeta.component.ts`.
+- Modificar `listado.component.html`para invocar adecuadamente al nuevo componente pasandole el héroe cómo parámetro
+```typescript
+ <app-heroe-tarjeta [heroe]="heroe"></app-heroe-tarjeta>
+```
 
 
