@@ -231,4 +231,34 @@ No es necesario, pero es conveniente por claridad del código.
  <app-heroe-tarjeta [heroe]="heroe"></app-heroe-tarjeta>
 ```
 
+## PipeImagen
 
+Utilizar ***pipes*** para construir la ruta de las imagenes.
+
+```shell
+  ng generate pipe heroes/pipes/imagen --skip-tests
+```
+`imagen.pipe.ts`
+```Typescript
+  transform(heroe: Heroe): string {
+    return `assets/heroes/${ heroe.id }.jpg`;
+  }
+```
+
+`heroe-tarjeta.component.html`
+```html
+  <img mat-card-image src="{{heroe | imagen}}">
+```
+
+
+## Ruta Heroe y Editar Heroe.
+Se trata de navegar a la página de detalle de Heroe.
+
+`heroe-tarjeta.component.html`
+```html
+        <button mat-button 
+            color="warn"
+            [routerLink]="['/heroes', heroe.id]">
+            Leer mas...
+        </button>
+```
