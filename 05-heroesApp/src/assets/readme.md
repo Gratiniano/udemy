@@ -262,3 +262,54 @@ Se trata de navegar a la página de detalle de Heroe.
             Leer mas...
         </button>
 ```
+
+## Pantgalla de Heroe
+Ilustra el uso de *matGridList* y *ProgressSpinner*.
+También ilustra la navegación entre pantallas y componentes.
+
+`heroe-tarjeta.component.html` inicia la navegación
+```typescript
+        <button mat-button color="info"
+            [routerLink]="['/heroes/editar', heroe.id]">
+            Editar
+        </button>
+```
+`heroes-routing.module.ts` tiene definida la navegación.
+```typescript
+const routes : Routes =[
+  {
+    path: '',
+    component: HomeComponent,
+    children: [
+      ...
+      {path: ':id', component: HeroeComponent},
+      ...
+    ]
+  }
+```
+
+`heroe.component.ts`invoca y consume el servicio proveedor.
+```typescript
+
+  heroe!: Heroe;
+
+  constructor(private activatedRoute: ActivatedRoute,
+              private heroesService: HeroesService) { }
+
+  ngOnInit(): void {
+    this.activatedRoute.params
+      .pipe(
+        switchMap( ({ id }) => this.heroesService.getHeroePorId(id) )
+      )
+      .subscribe( heroe => this.heroe = heroe);
+  }
+```
+
+`heroes.service.ts` realiza la llamada rest para obtener los datos del heroe
+```typescript
+  getHeroePorId(id: string):Observable<Heroe>{
+    return this.http.get<Heroe>(`http://localhost:3000/heroes/${id}`);
+  }
+```
+* Interesante, para definir que una cadena contiene variables que pueden sustituirese se usa el delimitador "acento grave" (\`).
+

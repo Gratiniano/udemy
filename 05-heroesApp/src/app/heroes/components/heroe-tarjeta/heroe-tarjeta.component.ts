@@ -7,7 +7,7 @@ import { Heroe } from '../../interfaces/heroes.interface';
   styles: [
   ]
 })
-export class HeroeTarjetaComponent  {
+export class HeroeTarjetaComponent   {
 
   @Input() heroe!: Heroe;
 
