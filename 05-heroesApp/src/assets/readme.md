@@ -313,3 +313,145 @@ const routes : Routes =[
 ```
 * Interesante, para definir que una cadena contiene variables que pueden sustituirese se usa el delimitador "acento grave" (\`).
 
+
+## 196. Diseño de la pantalla.
+Se programa el retorno a la pantalla anterior.
+`heroe.component.html`
+```html
+    <button mat-button color="warn" click()="regresar()">
+        Regresar
+    </button>
+```
+
+`heroe.component.ts`
+```Typescript
+  constructor(private activatedRoute: ActivatedRoute,
+              private heroesService: HeroesService,
+              private router: Router) { }
+
+  regresar(){
+    this.router.navigate(['/heroes/listado']);
+  }
+```
+**Observar uso del objeto *Router*.**
+
+
+## Variables de Entorno+
+
+Carpeta **src/environments** contiene los ficheros de configuración del entorno:
+- *enrironment.ts*.
+- *environtment.prod.ts*.
+
+`environment.prod.ts`
+```Typescript
+  export const environment = {
+    production: true,
+    baseUrl: 'http://host-produccion'
+  };
+```
+
+`environment.ts`
+```Typescript
+  export const environment = {
+    production: false
+    baseUrl: 'http://localhost:3000'
+  };
+```
+
+Se puede consultar en los componentes y modulos.
+
+`heroes.service.ts`
+```Typescript
+  import { environment } from 'src/environments/environment';
+  ...
+  baseUrl:string = environment.baseUrl;
+  ...
+  getHeroes():Observable<Heroe[]>{
+    return this.http.get<Heroe[]>(`${this.baseUrl}/heroes`);
+```
+
+Cuando se haga el build se indicará qué fichero de configuración reemplaza a *environment.ts*. Esto se indica en `angular.json`.
+```typescript
+  "configurations": {
+    "production": {
+      "fileReplacements": [
+        {
+          "replace": "src/environments/environment.ts",
+          "with": "src/environments/environment.prod.ts"
+        }
+      ],
+      ...
+```
+
+Y se indica mediante parámetro en el momento de la construcción
+```shell
+  ng build --configuration production 
+```
+
+https://runebook.dev/es/docs/angular/-index-#Guide
+
+
+
+## 198. Material autocomplete.
+
+Usa el componente **mat-autocomplete** asociado a un elemento del formulario.
+Usa *formularios asociados a templates*, para ello:
+
+`heroes.module.ts`
+```Typescript
+  import { FormsModule } from '@angular/forms';
+```
+`buscar.component.html`
+```html
+  <input type="text"
+         ...
+        [(ngModel)]="termino"
+        ...
+  >
+```
+
+Para poder utilizar el servicio de busqueda debemos inyectarlo en el constructor del componente.
+`buscar.component.ts`
+```typescript
+  import { HeroesService } from '../../services/heroes.service';
+  ...
+   constructor(private heroeService: HeroesService) { }
+```
+
+## 199. Autocomplete
+
+Genera un nuevo endpoint usando las capacidades de query de **json_server**: <url>?q=<patron>
+
+
+Para determinar qué selección se realizó utiliza la propiedad *optionSelected* de *mat-autocomplete*.
+
+`buscar.component.html`
+```Typescript
+  <mat-autocomplete autoActiveFirstOption 
+                  #auto="matAutocomplete"
+                  (optionSelected)="opcionSeleccionada( $event )">
+  <mat-option *ngFor="let heroe of heroes" [value]="heroe">
+  ...
+  <div>
+    {{ heroeSeleccionado | json }}
+  </div>
+
+```
+
+`buscar.component.ts`
+```typescript
+  heroeSeleccionado!: Heroe;
+  ...
+  opcionSeleccionada ( event: MatAutocompleteSelectedEvent){
+    const heroe:Heroe = event.option.value;
+
+    this.termino = heroe.superhero;
+
+    this.heroeService.getHeroePorId(heroe.id!)
+      .subscribe( heroe => this.heroeSeleccionado = heroe );
+  }
+```
+
+
+
+# Sección 14. HeroesApp - CRUD (Continuación con Angular Material)
