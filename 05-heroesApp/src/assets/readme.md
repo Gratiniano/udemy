@@ -455,3 +455,19 @@ Para determinar qué selección se realizó utiliza la propiedad *optionSelected
 
 
 # Sección 14. HeroesApp - CRUD (Continuación con Angular Material)
+## 207. Diseño de la pantalla para agregar heroes.
+## 208. Insertar en base de datos.
+
+**Ajuste anchura pantalla**
+Se hace con Flex Layout
+`agregar.component.html`
+```typescript
+<div  fxLayout="row" 
+          fxLayout.xs="column"
+          fxLayoutGap="20px">
+    
+```
+
+**Inserción en la base de datos**
+Lo hacemos mediante el método **POST**.
+

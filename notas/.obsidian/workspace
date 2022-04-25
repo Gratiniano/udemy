@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tablas a actualizar con datos no disociados.md",
+            "file": "Capitulo 3. Dominando la plantilla Given-Then-When.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tablas a actualizar con datos no disociados.md",
+                "file": "Capitulo 3. Dominando la plantilla Given-Then-When.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tablas a actualizar con datos no disociados.md"
+                "file": "Capitulo 3. Dominando la plantilla Given-Then-When.md"
               }
             }
           },
@@ -110,6 +110,7 @@
   },
   "active": "0a1b5d60c29b53c9",
   "lastOpenFiles": [
+    "Capitulo 3. Dominando la plantilla Given-Then-When.md",
     "Tablas a actualizar con datos no disociados.md",
     "Reunión 20-04-2022.md",
     "SIGCA/2022/2022_5595. Solicitud de muestra de Control 2ª campaña. B1.md",
@@ -118,7 +119,6 @@
     "RIA/FUNCIONALIDADES RIA-FORMS.md",
     "RIA/Captura de Datos de Solicitud. Actividades, Materias Primas y Productos Resultantes.md",
     "Revision EVS e Intefaz de usuario..md",
-    "Spring/Spring REST API + OAuth2 + Angular.  Baeldung.md",
-    "SIGCA/2020/2020_5070. Incidencia pago bienestar Animal..md"
+    "Spring/Spring REST API + OAuth2 + Angular.  Baeldung.md"
   ]
 }
