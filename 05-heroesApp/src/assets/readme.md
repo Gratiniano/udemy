@@ -471,3 +471,10 @@ Se hace con Flex Layout
 **Inserción en la base de datos**
 Lo hacemos mediante el método **POST**.
 
+`heroes.service.ts`
+```Typescript
+  agregarHeroe( heroe: Heroe): Observable<Heroe>{
+    return this.http.post<Heroe>(`${this.baseUrl}/heroes`, heroe)
+
+  }
+```
