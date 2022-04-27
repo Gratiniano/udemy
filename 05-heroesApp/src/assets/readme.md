@@ -463,7 +463,7 @@ Se hace con Flex Layout
 `agregar.component.html`
 ```typescript
 <div  fxLayout="row" 
-          fxLayout.xs="column"
+          fxLayout.xs="column" 
           fxLayoutGap="20px">
     
 ```
