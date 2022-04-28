@@ -1,4 +1,4 @@
-## 1. Introducción a SBE y Gherkin.
+## Capitulo 1. Introducción a SBE y Gherkin.
 
 
 #### 1.5.1 Derivar el alcance de los objetivos.
@@ -6,7 +6,7 @@ Los requisitos aparecen en el dominio del negocio.
 Las soluciones aparecen en el dominio técnico.
 #### 1.5.2 Ilustrar los requisitos con ejemplos.
 #### 1.5.3 Especificar de forma colaborativa.
-### 1.6 Beneficios a largo plazo de automatizar convesaciones.
+### 1.6 Beneficios a largo plazo de automatizar conversaciones.
 #DEFINICIÓN    *Documentación viva -* documentación que cambia junto con el sistema que documenta gracias al enlace entre texto y código y a la validación frecuente.
 
 ### 1.7 Capturando conversaciones como especificaciones ejecutable
