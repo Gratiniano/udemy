@@ -1,4 +1,4 @@
-# Capítulo 2. La capa de especificación y la capa de automatización.
+# Capítulo 2. La capa de especificación y la capa de automatización. 
 ## 2.1 Las capas de especificaciones ejecutables.
 Cada especificación ejecutable tiene dos capas:  *capa de especificación*  y  *capa de automatización*.
 
