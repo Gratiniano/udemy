@@ -1,7 +1,7 @@
 # Capitulo 6. El ciclo de vida de las especificaciones ejecutables
 Dos tipos de *feedback*:
 	- *Soporte:* confirman que se está trabajando en la dirección correcta.
-	- *Crítica:* indican que se debe corregir el curso de la acción. 
+	- *Crítica:* indican que se debe corregir el curso de la acción.
 
 ![Cuadrante de testing agile ](https://i1.wp.com/lisacrispin.com/wp-content/uploads/2011/11/Agile-Testing-Quadrants.png "titulo")
 
